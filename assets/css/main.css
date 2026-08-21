@@ -56,6 +56,13 @@
   --warn:         #B8790A;
   --error:        #C0392B;
 
+  /* Light text for the handful of spots that sit directly on a deliberately
+     dark photo scrim (media tags, the home split-track panes) rather than
+     on the page's own light surface. */
+  --on-dark:        #F0EBE0;
+  --on-dark-muted:  #C9C3B9;
+  --on-dark-faint:  #A39B8F;
+
   /* Type */
   --font-display: 'Instrument Serif', 'Times New Roman', Georgia, serif;
   --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
@@ -308,11 +315,12 @@ em, .em { font-style: italic; }
 .btn:hover::before, .btn:focus-visible::before { transform: scaleY(1); }
 .btn:hover, .btn:focus-visible { color: var(--ink); border-color: var(--accent-lit); }
 .btn:active { transform: translateY(1px); }
-.btn__arrow { transition: transform var(--t-base) var(--ease-out); flex: none; }
-.btn:hover .btn__arrow { transform: translateX(4px); }
+.btn__arrow { color: var(--accent-lit); transition: transform var(--t-base) var(--ease-out), color var(--t-base) var(--ease-out); flex: none; }
+.btn:hover .btn__arrow { transform: translateX(4px); color: var(--ink); }
 
 .btn--primary { --btn-bg: var(--accent); --btn-fg: var(--ink); --btn-bd: var(--accent); font-weight: 500; }
 .btn--primary:hover, .btn--primary:focus-visible { color: var(--ink); }
+.btn--primary .btn__arrow { color: var(--ink); }
 .btn--lg { min-height: 56px; padding: 1.05rem 2.1rem; }
 .btn--full { width: 100%; }
 
@@ -325,9 +333,9 @@ em, .em { font-style: italic; }
   color: var(--cream); padding-block: 0.35rem;
   transition: color var(--t-base) var(--ease-out);
 }
-.arrow-link svg { transition: transform var(--t-base) var(--ease-out); }
+.arrow-link svg { color: var(--accent-lit); transition: transform var(--t-base) var(--ease-out), color var(--t-base) var(--ease-out); }
 .arrow-link:hover, .arrow-link:focus-visible { color: var(--accent-lit); }
-.arrow-link:hover svg { transform: translateX(5px); }
+.arrow-link:hover svg { transform: translateX(5px); color: var(--accent-deep); }
 
 /* ── 6. Header ─────────────────────────────────────────────────────────── */
 .header {
@@ -532,8 +540,10 @@ em, .em { font-style: italic; }
 .media[style*="background-image"]::before { opacity: 0; }
 .media::after {
   content: ''; position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(11,10,9,0) 35%, rgba(11,10,9,0.72) 100%),
-              linear-gradient(160deg, rgba(252,123,5,0.16), transparent 55%);
+  /* Just enough shade behind the corner tag for contrast — the photo itself
+     should read at close to full brightness, not sit under a heavy vignette. */
+  background: linear-gradient(180deg, rgba(11,10,9,0) 62%, rgba(11,10,9,0.58) 100%),
+              linear-gradient(160deg, rgba(252,123,5,0.12), transparent 45%);
   pointer-events: none;
 }
 .media--b::before {
@@ -549,7 +559,7 @@ em, .em { font-style: italic; }
 .media__tag {
   position: absolute; left: 0.9rem; bottom: 0.9rem; z-index: 2;
   font-family: var(--font-mono); font-size: 0.6875rem;
-  text-transform: uppercase; letter-spacing: 0.14em; color: var(--cream-2);
+  text-transform: uppercase; letter-spacing: 0.14em; color: var(--on-dark);
 }
 .media__caption {
   margin-top: var(--s-2); font-family: var(--font-mono); font-size: 0.6875rem;
@@ -628,16 +638,19 @@ em, .em { font-style: italic; }
   background-size: cover; background-position: center;
   transform: scale(1.04);
   transition: transform 900ms var(--ease-expo), opacity var(--t-slow);
-  opacity: 0.42;
+  opacity: 1;
 }
-.track__pane:hover .track__bg { transform: scale(1.1); opacity: 0.55; }
+.track__pane:hover .track__bg { transform: scale(1.1); }
 .track__pane::before {
   content: ''; position: absolute; inset: 0; z-index: -3;
-  background: linear-gradient(150deg, var(--surface-3), var(--ink));
+  background: linear-gradient(150deg, var(--surface-3), var(--surface-2));
 }
+/* A light wash instead of a dark scrim — the photo stays bright at the top
+   and fades toward an almost-solid white plate behind the text block, so
+   dark type (matching the rest of the page) stays readable over any photo. */
 .track__pane::after {
   content: ''; position: absolute; inset: 0; z-index: -1;
-  background: linear-gradient(180deg, rgba(11,10,9,0.35) 0%, rgba(11,10,9,0.88) 78%);
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.65) 45%, rgba(255,255,255,0.92) 90%);
 }
 .track__num {
   position: absolute; top: clamp(1.25rem, 3vw, 2.25rem); left: clamp(1.5rem, 3.5vw, 3rem);
@@ -649,10 +662,14 @@ em, .em { font-style: italic; }
 .track__list { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: var(--s-4); }
 .chip {
   display: inline-flex; align-items: center; white-space: nowrap;
-  padding: 0.3rem 0.7rem; border: 1px solid var(--line-2); border-radius: 100px;
+  padding: 0.3rem 0.7rem; border: 1px solid rgba(252,123,5,0.22); border-radius: 100px;
   font-family: var(--font-mono); font-size: 0.6875rem;
-  letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--cream-2);
+  transition: border-color var(--t-base) var(--ease-out),
+              color var(--t-base) var(--ease-out),
+              background var(--t-base) var(--ease-out);
 }
+.chip:hover { border-color: var(--accent-lit); color: var(--accent-lit); background: var(--accent-wash); }
 .chip--accent { border-color: rgba(252,123,5,0.4); color: var(--accent-lit); background: var(--accent-wash); }
 
 /* Marquee */
