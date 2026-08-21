@@ -46,6 +46,7 @@
      text or act as an accent on this dark ground — it is used decoratively
      (the hero route gradient) and belongs to print / light collateral. */
   --brand-blue:   #022C84;
+  --brand-blue-lit: #6E9BFF;   /* 5.9:1 on --surface — logo-navy family, legible as small text */
 
   /* Lines */
   --line:         rgba(232, 227, 218, 0.09);
@@ -92,7 +93,7 @@
   --radius: 2px;
   --radius-lg: 4px;
 
-  --header-h: 104px;
+  --header-h: 110px;
 }
 
 /* ── 1. Reset & base ───────────────────────────────────────────────────── */
@@ -355,16 +356,17 @@ em, .em { font-style: italic; }
   display: flex; align-items: center; justify-content: space-between; gap: var(--s-4);
 }
 
-/* The brand mark sits above the wordmark, matching the source logo's own
-   vertical lockup, on a white plate since the artwork itself is opaque
-   (no transparency to drop onto the dark header/footer). */
+/* Brand mark, "SAGAR" wordmark and the tagline pair all come straight off
+   the source logo — three crops, stacked in the same order the artwork
+   itself uses. All three have had their white background keyed out so
+   they sit directly on the dark header/footer, no plate behind them. */
 .logo {
   display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: 6px; flex: none;
-  background: #fff; border-radius: 10px; padding: 10px 16px;
+  gap: 3px; flex: none;
 }
 .logo__mark { height: 44px; width: auto; display: block; }
-.logo__wordmark { height: 26px; width: auto; display: block; }
+.logo__wordmark { height: 22px; width: auto; display: block; margin-top: 2px; }
+.logo__tagline { height: 16px; width: auto; display: block; margin-top: 1px; }
 .js .logo__mark, .js .logo__wordmark { transition: transform 550ms var(--ease-expo); }
 .logo:hover .logo__mark { transform: rotate(-4deg) scale(1.05); }
 .logo:hover .logo__wordmark { transform: scale(1.02); }
@@ -1067,7 +1069,6 @@ em, .em { font-style: italic; }
   .row__idx { font-size: 0.6875rem; }
 }
 @media (max-width: 480px) {
-  :root { --header-h: 74px; }
   .btn { padding: 0.8rem 1.2rem; font-size: 0.6875rem; }
   .btn-row { gap: 0.6rem; }
   .btn-row .btn { flex: 1 1 auto; }
@@ -1192,10 +1193,11 @@ em, .em { font-style: italic; }
 .logo { flex: 0 1 auto; min-width: 0; }
 .header__actions { flex: none; }
 @media (max-width: 600px) {
-  :root { --header-h: 84px; }
-  .logo { padding: 6px 10px; gap: 4px; }
+  :root { --header-h: 78px; }
+  .logo { gap: 2px; }
   .logo__mark { height: 30px; }
-  .logo__wordmark { height: 17px; }
+  .logo__wordmark { height: 15px; margin-top: 1px; }
+  .logo__tagline { height: 11px; }
 }
 
 /* ── 19. Native control theming on dark ────────────────────────────────── */
