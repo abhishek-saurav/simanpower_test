@@ -1,0 +1,126 @@
+<!-- Original built-in enquiry form for candidates.html.
+     Not used while the site points at Google Forms. To switch back,
+     paste this in place of the .formlink panel and rebuild. -->
+
+    <form class="form reveal" data-form data-subject="Candidate registration — website">
+      <div class="form__grid form__grid--2">
+        <div class="field">
+          <label class="field__label" for="c-name">Full name (as on passport) <span class="field__req" aria-hidden="true">*</span></label>
+          <input class="field__input" id="c-name" name="full_name" type="text" autocomplete="name" required>
+          <p class="field__error">Please enter your full name.</p>
+        </div>
+        <div class="field">
+          <label class="field__label" for="c-phone">Phone / WhatsApp <span class="field__req" aria-hidden="true">*</span></label>
+          <input class="field__input" id="c-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+          <p class="field__error">Please enter a number we can reach you on.</p>
+        </div>
+      </div>
+
+      <div class="form__grid form__grid--2">
+        <div class="field">
+          <label class="field__label" for="c-email">Email</label>
+          <input class="field__input" id="c-email" name="email" type="email" autocomplete="email">
+          <p class="field__hint">Optional &mdash; we will call or message on WhatsApp.</p>
+          <p class="field__error">That email address does not look right.</p>
+        </div>
+        <div class="field">
+          <label class="field__label" for="c-city">City / district <span class="field__req" aria-hidden="true">*</span></label>
+          <input class="field__input" id="c-city" name="city" type="text" autocomplete="address-level2" required>
+          <p class="field__error">Please tell us where you are based.</p>
+        </div>
+      </div>
+
+      <div class="form__grid form__grid--2">
+        <div class="field">
+          <label class="field__label" for="c-trade">Your trade <span class="field__req" aria-hidden="true">*</span></label>
+          <input class="field__input" id="c-trade" name="trade" type="text" required placeholder="e.g. Shuttering carpenter, 6G welder, HVAC technician">
+          <p class="field__error">Please tell us your trade.</p>
+        </div>
+        <div class="field">
+          <label class="field__label" for="c-exp">Years of experience <span class="field__req" aria-hidden="true">*</span></label>
+          <select class="field__select" id="c-exp" name="experience" required>
+            <option value="">Select</option>
+            <option>Fresher (no experience)</option>
+            <option>Under 2 years</option>
+            <option>2&ndash;5 years</option>
+            <option>5&ndash;10 years</option>
+            <option>Over 10 years</option>
+          </select>
+          <p class="field__error">Please select your experience level.</p>
+        </div>
+      </div>
+
+      <div class="form__grid form__grid--2">
+        <div class="field">
+          <label class="field__label" for="c-passport">Passport status <span class="field__req" aria-hidden="true">*</span></label>
+          <select class="field__select" id="c-passport" name="passport" required>
+            <option value="">Select</option>
+            <option>Valid passport in hand</option>
+            <option>Applied, waiting</option>
+            <option>Expired &mdash; renewing</option>
+            <option>No passport yet</option>
+          </select>
+          <p class="field__error">Please select your passport status.</p>
+        </div>
+        <div class="field">
+          <label class="field__label" for="c-country">Preferred country</label>
+          <select class="field__select" id="c-country" name="preferred_country">
+            <option value="">Any</option>
+            <option>United Arab Emirates</option>
+            <option>Saudi Arabia</option>
+            <option>Qatar</option>
+            <option>Oman</option>
+            <option>Kuwait</option>
+            <option>Bahrain</option>
+            <option>Romania</option>
+            <option>Poland</option>
+            <option>Croatia</option>
+            <option>Portugal</option>
+            <option>Malaysia</option>
+            <option>Singapore</option>
+            <option>Japan</option>
+            <option>Israel</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="c-cv">Link to your CV</label>
+        <input class="field__input" id="c-cv" name="cv_link" type="url" placeholder="https://drive.google.com/…">
+        <p class="field__hint">Optional. You can also email your CV to manpowersagar@gmail.com or bring it to the office.</p>
+        <p class="field__error">Please enter a full link starting with https://</p>
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="c-msg">Anything else</label>
+        <textarea class="field__textarea" id="c-msg" name="message" placeholder="Previous overseas experience, certificates held, when you are available to travel…"></textarea>
+      </div>
+
+      <div class="field">
+        <label class="check">
+          <input type="checkbox" name="consent" required>
+          <span>I agree that Sagar International Manpower may contact me about job opportunities and may keep my details on file. <span class="field__req" aria-hidden="true">*</span></span>
+        </label>
+        <p class="field__error">Please tick this so we can contact you.</p>
+      </div>
+
+      <noscript>
+        <div class="notice notice--accent">
+          <svg class="notice__icon" aria-hidden="true"><use href="#i-alert"/></svg>
+          <div>
+            <p class="notice__title">This form needs JavaScript to send</p>
+            <p class="notice__body">JavaScript is switched off in your browser, so this form cannot submit. Please email <a class="link-underline accent" href="mailto:manpowersagar@gmail.com">manpowersagar@gmail.com</a> or call <a class="link-underline accent" href="tel:+919936396396">+91 99363 96396</a> instead — we will pick it up either way.</p>
+          </div>
+        </div>
+      </noscript>
+
+      <div class="form__status" role="status" aria-live="polite"></div>
+
+      <div class="btn-row">
+        <button class="btn btn--primary btn--lg" type="submit">
+          Register
+          <svg class="btn__arrow" width="14" height="14" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+        </button>
+        <a class="arrow-link" href="https://wa.me/919936396396">Or message us on WhatsApp <svg width="14" height="14" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+      </div>
+    </form>

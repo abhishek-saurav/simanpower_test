@@ -1,0 +1,123 @@
+<!-- Original built-in enquiry form for employers.html.
+     Not used while the site points at Google Forms. To switch back,
+     paste this in place of the .formlink panel and rebuild. -->
+
+    <form class="form reveal" data-form data-subject="Manpower requirement — website enquiry">
+      <!-- Wire this to your form backend by adding data-endpoint="https://…" on the <form>.
+           Until then the form opens the visitor's mail client with everything filled in.
+           See README.md § "Wiring up the forms". -->
+      <div class="form__grid form__grid--2">
+        <div class="field">
+          <label class="field__label" for="e-company">Company <span class="field__req" aria-hidden="true">*</span></label>
+          <input class="field__input" id="e-company" name="company" type="text" autocomplete="organization" required>
+          <p class="field__error" id="err-company">Please enter your company name.</p>
+        </div>
+        <div class="field">
+          <label class="field__label" for="e-name">Your name <span class="field__req" aria-hidden="true">*</span></label>
+          <input class="field__input" id="e-name" name="contact_person" type="text" autocomplete="name" required>
+          <p class="field__error">Please enter your name.</p>
+        </div>
+      </div>
+
+      <div class="form__grid form__grid--2">
+        <div class="field">
+          <label class="field__label" for="e-email">Work email <span class="field__req" aria-hidden="true">*</span></label>
+          <input class="field__input" id="e-email" name="email" type="email" autocomplete="email" required>
+          <p class="field__error">Please enter a valid email address.</p>
+        </div>
+        <div class="field">
+          <label class="field__label" for="e-phone">Phone / WhatsApp <span class="field__req" aria-hidden="true">*</span></label>
+          <input class="field__input" id="e-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+          <p class="field__error">Please enter a number we can reach you on.</p>
+        </div>
+      </div>
+
+      <div class="form__grid form__grid--2">
+        <div class="field">
+          <label class="field__label" for="e-country">Country of deployment <span class="field__req" aria-hidden="true">*</span></label>
+          <select class="field__select" id="e-country" name="country" required>
+            <option value="">Select a country</option>
+            <option>United Arab Emirates</option>
+            <option>Saudi Arabia</option>
+            <option>Qatar</option>
+            <option>Oman</option>
+            <option>Kuwait</option>
+            <option>Bahrain</option>
+            <option>Romania</option>
+            <option>Poland</option>
+            <option>Croatia</option>
+            <option>Portugal</option>
+            <option>Malaysia</option>
+            <option>Singapore</option>
+            <option>Japan</option>
+            <option>Israel</option>
+            <option>Other</option>
+          </select>
+          <p class="field__error">Please choose a destination country.</p>
+        </div>
+        <div class="field">
+          <label class="field__label" for="e-count">Total headcount <span class="field__req" aria-hidden="true">*</span></label>
+          <input class="field__input" id="e-count" name="headcount" type="number" min="1" step="1" inputmode="numeric" required>
+          <p class="field__hint">Approximate is fine at this stage.</p>
+          <p class="field__error">Please enter a headcount of at least 1.</p>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="e-trades">Trades required <span class="field__req" aria-hidden="true">*</span></label>
+        <textarea class="field__textarea" id="e-trades" name="trades" required placeholder="e.g. 40 shuttering carpenters, 25 steel fixers, 12 scaffolders, 4 civil foremen"></textarea>
+        <p class="field__hint">List trade and quantity. Salary band and contract length help us answer faster.</p>
+        <p class="field__error">Please tell us which trades you need.</p>
+      </div>
+
+      <div class="form__grid form__grid--2">
+        <div class="field">
+          <label class="field__label" for="e-date">Target mobilisation date</label>
+          <input class="field__input" id="e-date" name="mobilisation_date" type="date">
+        </div>
+        <div class="field">
+          <label class="field__label" for="e-contract">Contract length</label>
+          <select class="field__select" id="e-contract" name="contract_length">
+            <option value="">Not decided yet</option>
+            <option>Under 6 months</option>
+            <option>6&ndash;12 months</option>
+            <option>2 years</option>
+            <option>3 years or longer</option>
+            <option>Seasonal</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="e-msg">Anything else we should know</label>
+        <textarea class="field__textarea" id="e-msg" name="message" placeholder="Accommodation, site location, salary band, overtime policy, previous sourcing experience…"></textarea>
+      </div>
+
+      <div class="field">
+        <label class="check">
+          <input type="checkbox" name="consent" required>
+          <span>I agree that Sagar International Manpower may contact me about this requirement by email, phone or WhatsApp. <span class="field__req" aria-hidden="true">*</span></span>
+        </label>
+        <p class="field__error">Please tick this so we can reply to you.</p>
+      </div>
+
+      <noscript>
+        <div class="notice notice--accent">
+          <svg class="notice__icon" aria-hidden="true"><use href="#i-alert"/></svg>
+          <div>
+            <p class="notice__title">This form needs JavaScript to send</p>
+            <p class="notice__body">JavaScript is switched off in your browser, so this form cannot submit. Please email <a class="link-underline accent" href="mailto:manpowersagar@gmail.com">manpowersagar@gmail.com</a> or call <a class="link-underline accent" href="tel:+919936396396">+91 99363 96396</a> instead — we will pick it up either way.</p>
+          </div>
+        </div>
+      </noscript>
+
+      <div class="form__status" role="status" aria-live="polite"></div>
+
+      <div class="btn-row">
+        <button class="btn btn--primary btn--lg" type="submit">
+          Send requirement
+          <svg class="btn__arrow" width="14" height="14" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+        </button>
+        <a class="arrow-link" href="mailto:manpowersagar@gmail.com">Or email us directly <svg width="14" height="14" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+      </div>
+    </form>

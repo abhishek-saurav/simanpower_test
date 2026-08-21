@@ -1,0 +1,92 @@
+{
+  "company_basics": {
+    "legal_name": "Sagar International Manpower Pvt. Ltd.",
+    "tagline_options": [
+      "Connecting Talent, Building Global Careers.",
+      "Your Dreams, Our Direction, Global Opportunities."
+    ],
+    "about_text": "SAGAR INTERNATIONAL MANPOWER is a trusted international manpower recruitment agency dedicated to connecting skilled, semi-skilled, and professional candidates with genuine employment opportunities across the globe. We focus on providing reliable recruitment solutions while helping candidates build successful careers in international markets.\n\nWith a commitment to professionalism, transparency, and candidate satisfaction, we work closely with employers to understand their workforce requirements and provide suitable talent. Our goal is to make overseas employment a smooth, reliable, and rewarding journey for both employers and job seekers.\n\nSAGAR INTERNATIONAL MANPOWER — Your Talent. Your Future. The World Awaits.",
+    "brand_colors": { "primary_blue": "#022C84", "primary_orange": "#FC7B05" },
+    "ra_license_no": "B-1550/PUN/PART/1000+/5/9486/2019",
+    "partner_id": "RA5466131",
+    "license_expiry": "19-11-2028"
+  },
+
+  "offices": {
+    "head_office": {
+      "address": "First Floor, Opposite Electricity Board, Nakodar Road, Mehatpur, PIN 144041, District Jalandhar, Punjab, India",
+      "landline": "+91-1821-512976"
+    },
+    "branch_office": {
+      "address": "E4/484, Vibhav Khand-4, Gomti Nagar, Lucknow, Uttar Pradesh, PIN 226010"
+    },
+    "dubai_office": {
+      "po_box": "84761, Dubai, UAE",
+      "phones": ["+971 5533 83633", "+971 5079 41638", "+971 4280 6532"]
+    }
+  },
+
+  "contact": {
+    "people": [
+      { "name": "Mr. Ram Awadh", "title": "Managing Director (External)", "phone": "+971-55-338-3633" },
+      { "name": "Mr. Pardeep Singh", "title": "Director (Internal)", "phone": "+91-98156-49745" }
+    ],
+    "emails": ["info@simanpower.in", "manpowersagar@gmail.com", "skysagar101@gmail.com", "manpowersagar@yahoo.com"],
+    "business_hours": "10:00 AM – 6:00 PM",
+    "social_media": {
+      "instagram": "https://www.instagram.com/sagarinternationalmanpower",
+      "facebook": "https://www.facebook.com/share/1EtKsjnsGA/"
+    }
+  },
+
+  "services": [
+    "Manpower Consultancy",
+    "Manpower Services",
+    "Recruitment Consultant",
+    "IT Staffing Services",
+    "Contract Staffing Services",
+    "Recruitment Process Outsourcing (RPO)"
+  ],
+
+  "industries_served": [
+    "Construction", "Manufacturing", "Oil and Gas", "Engineering", "Hospitality",
+    "Energy and Resources", "IT and Telecom", "Support Services", "Mining",
+    "Tailoring", "Farm worker", "Logistics"
+  ],
+
+  "countries_served": {
+    "regions": ["Gulf countries (unspecified list)"],
+    "europe_and_other": [
+      "Romania", "Croatia", "Bulgaria", "Malta", "Greece", "Bosnia", "Albania",
+      "Serbia", "North Macedonia", "Cyprus", "Montenegro", "Barbados", "Algeria",
+      "Ukraine", "Slovakia", "Turkey", "Russia"
+    ]
+  },
+
+  "clients": [
+    "Dubai Trust Contracting LLC", "Al-Khatib Est. (Turning & Metal Const.)", "Italian Art Factory",
+    "Rose Wooden", "Abu Dhabi", "Etisalat", "Emirates Taxi", "All Falah Steel",
+    "Bin Hafeez Gen. Cont. Est.", "Westren Bainoona Group", "Explorer for Employment Services",
+    "Al.Qabdah", "Technical Metal Industrial Co. LLC", "Equipment & Machinery",
+    "Xtra Mix International Precast LLC", "Drake & Scull Construction Saudi Arabia",
+    "M/S Imdaad LLC", "Action International Services LLC", "Dhabi Contracting",
+    "ASI Scaffolding Contracting LLC", "ASAK LLC", "UrboCon Trading and Contracting",
+    "Cerealcom", "AUCC", "M/S CEDE Energy China", "Amal Manpower Supply/Belhasa",
+    "Al Ali Engineering Co.", "TAYAS Contracting LLC", "Royal for Employment Services LLC",
+    "Enhance On Demand Labors Supply", "Gulf Asian Packaging Services L.L.C",
+    "Best Benefit Technical Services L.L.C", "Liberty Building Systems FZC",
+    "Smart Superior Technical Services LLC", "Class Valet Parking",
+    "T Max On Demand Labors Supply", "Cars Taxi LLC",
+    "Kelvin Catering Services & Facilities Management Emirates L.L.C",
+    "V O C E International Constructions LLC", "Jai Akash Technical Works LLC",
+    "KRMM Building Contracting LLC", "Bnaa Alghad Carpenty and Steel Works Contracting L.L.C",
+    "HRE Constrction LLC", "Autobuild Construction L.L.C", "Decor L.L.C",
+    "Selective Manpower Service L.L.C", "Vimal Antony Concrete Carpenter Cont",
+    "Petroland Recruitment"
+  ],
+
+  "forms": {
+    "resume_form": "https://forms.gle/placeholder",
+    "recruiter_contact_form": "https://forms.gle/placeholder"
+  }
+}c

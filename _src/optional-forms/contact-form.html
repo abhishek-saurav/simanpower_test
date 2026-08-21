@@ -1,0 +1,67 @@
+<!-- Original built-in enquiry form for contact.html.
+     Not used while the site points at Google Forms. To switch back,
+     paste this in place of the .formlink panel and rebuild. -->
+
+        <form class="form reveal" data-form data-subject="General enquiry — simanpower.in">
+          <div class="field">
+            <label class="field__label" for="g-type">I am <span class="field__req" aria-hidden="true">*</span></label>
+            <select class="field__select" id="g-type" name="enquiry_type" required>
+              <option value="">Select one</option>
+              <option>An employer looking to hire</option>
+              <option>A candidate looking for work</option>
+              <option>A partner or sub-vendor</option>
+              <option>Something else</option>
+            </select>
+            <p class="field__error">Please tell us which one you are.</p>
+          </div>
+
+          <div class="form__grid form__grid--2">
+            <div class="field">
+              <label class="field__label" for="g-name">Name <span class="field__req" aria-hidden="true">*</span></label>
+              <input class="field__input" id="g-name" name="name" type="text" autocomplete="name" required>
+              <p class="field__error">Please enter your name.</p>
+            </div>
+            <div class="field">
+              <label class="field__label" for="g-phone">Phone / WhatsApp <span class="field__req" aria-hidden="true">*</span></label>
+              <input class="field__input" id="g-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+              <p class="field__error">Please enter a number we can reach you on.</p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="g-email">Email <span class="field__req" aria-hidden="true">*</span></label>
+            <input class="field__input" id="g-email" name="email" type="email" autocomplete="email" required>
+            <p class="field__error">Please enter a valid email address.</p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="g-msg">Your message <span class="field__req" aria-hidden="true">*</span></label>
+            <textarea class="field__textarea" id="g-msg" name="message" required placeholder="Tell us what you need. If you are hiring, include trade, headcount and destination country."></textarea>
+            <p class="field__error">Please write a short message.</p>
+          </div>
+
+          <div class="field">
+            <label class="check">
+              <input type="checkbox" name="consent" required>
+              <span>I agree that Sagar International Manpower may contact me about this enquiry. <span class="field__req" aria-hidden="true">*</span></span>
+            </label>
+            <p class="field__error">Please tick this so we can reply to you.</p>
+          </div>
+
+          <noscript>
+        <div class="notice notice--accent">
+          <svg class="notice__icon" aria-hidden="true"><use href="#i-alert"/></svg>
+          <div>
+            <p class="notice__title">This form needs JavaScript to send</p>
+            <p class="notice__body">JavaScript is switched off in your browser, so this form cannot submit. Please email <a class="link-underline accent" href="mailto:manpowersagar@gmail.com">manpowersagar@gmail.com</a> or call <a class="link-underline accent" href="tel:+919936396396">+91 99363 96396</a> instead — we will pick it up either way.</p>
+          </div>
+        </div>
+      </noscript>
+
+      <div class="form__status" role="status" aria-live="polite"></div>
+
+          <button class="btn btn--primary btn--lg btn--full" type="submit">
+            Send message
+            <svg class="btn__arrow" width="14" height="14" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+          </button>
+        </form>

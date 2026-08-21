@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://simanpower.in/sitemap.xml

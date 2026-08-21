@@ -1,0 +1,9 @@
+# Keeps internal source files off the public deployment.
+# Vercel serves everything in this repo as static files by default — anything
+# not listed here becomes fetchable at yoursite.vercel.app/<path>, even if no
+# page links to it. None of this is needed to run the site.
+
+_src/                        # page sources for build.py — not needed to serve the site
+build.py                     # the optional page assembler
+updated_company_info.json    # internal company data (emails, phones, full client list)
+README.md                    # developer handover notes, not meant for visitors
