@@ -355,25 +355,14 @@ em, .em { font-style: italic; }
   display: flex; align-items: center; justify-content: space-between; gap: var(--s-4);
 }
 
-.logo { display: inline-flex; align-items: center; gap: 0.7rem; flex: none; }
-.logo__mark { width: 30px; height: 30px; flex: none; }
-.logo__mark img { width: 100%; height: 100%; object-fit: contain; display: block; }
-.js .logo__mark img { transform-origin: 50% 65%; transition: transform 550ms var(--ease-expo); }
+.logo { display: inline-flex; align-items: center; flex: none; }
+.logo__full { height: clamp(34px, 4.6vw, 46px); width: auto; display: block; }
+.js .logo__full { transform-origin: 50% 65%; transition: transform 550ms var(--ease-expo); }
 /* The old geometric diamond spun cleanly on hover; this organic running-figure
    mark does not read as symmetric, so a full rotate looked broken. A small
    tilt-and-lift keeps the "alive on hover" feeling without the mark appearing
    upside down mid-spin. */
-.logo:hover .logo__mark img { transform: rotate(-6deg) scale(1.08) translateY(-1px); }
-.logo__text { display: flex; flex-direction: column; line-height: 1; }
-.logo__name {
-  font-family: var(--font-display); font-size: 1.2rem;
-  letter-spacing: 0.02em; color: var(--cream);
-}
-.logo__sub {
-  font-family: var(--font-mono); font-size: 0.5625rem; font-weight: 500;
-  text-transform: uppercase; letter-spacing: 0.22em; color: var(--faint);
-  margin-top: 3px;
-}
+.logo:hover .logo__full { transform: rotate(-2deg) scale(1.03) translateY(-1px); }
 
 .nav { display: none; }
 @media (min-width: 1080px) {
@@ -1196,12 +1185,9 @@ em, .em { font-style: italic; }
 /* The logo is a fixed-width flex item by default, which pushed the burger
    clean off a 390px viewport and made the mobile menu unreachable. */
 .logo { flex: 0 1 auto; min-width: 0; }
-.logo__text { min-width: 0; }
-.logo__name, .logo__sub { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .header__actions { flex: none; }
 @media (max-width: 600px) {
-  .logo__sub { display: none; }
-  .logo__name { font-size: 1.05rem; }
+  .logo__full { height: clamp(26px, 8vw, 34px); }
 }
 
 /* ── 19. Native control theming on dark ────────────────────────────────── */
